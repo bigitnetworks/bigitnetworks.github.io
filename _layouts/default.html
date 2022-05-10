@@ -129,7 +129,7 @@
 			}
 
 			$(window).on('load resize', function(){
-			  vidRescale();
+				if (document.querySelector('.tv')) vidRescale();
 			});
 		</script>
 	</body>
