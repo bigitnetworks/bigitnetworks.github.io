@@ -21,8 +21,6 @@
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 		<![endif]-->
 		<!-- google analytics code starts here -->
-{% include google-analytics.html %}
-
 		
 	</head>
 	<body id="page-top">
@@ -136,6 +134,10 @@
 				if (document.querySelector('.tv')) vidRescale();
 			});
 		</script>
+
+{% if site.google_analytics and jekyll.environment == 'production' %}
+{% include google-analytics.html %}
+{% endif %}
 
 	</body>
 </html>
